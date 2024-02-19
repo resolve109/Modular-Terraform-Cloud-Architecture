@@ -1,0 +1,12 @@
+- task: Terraform@0
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
+    backendServiceArm: '<Your-Azure-Service-Connection>'
+    backendAzureRmResourceGroupName: '$(TF_VAR_resource_group_name)'
+    backendAzureRmStorageAccountName: '$(TF_VAR_storage_account_name)'
+    backendAzureRmContainerName: '$(TF_VAR_container_name)'
+    backendAzureRmKey: '$(TF_VAR_key)'
+    environmentServiceNameAzureRM: '<Your-Azure-Service-Connection>'
+    commandOptions: '-var "vnet_modules=$(vnet_modules)"'
