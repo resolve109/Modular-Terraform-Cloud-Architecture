@@ -41,38 +41,38 @@ For more detailed instructions and best practices, refer to the official Azure D
 Security Note
 Always keep your sensitive data, such as secrets and tokens, secure by using the "Keep this value secret" feature for variables in Azure DevOps.
 
-Main/backend.tf: This file typically contains the configuration for the Terraform backend. The backend is responsible for storing your Terraform state and can also be used to run operations in the cloud.
+Main/backend.tf: This file contains the configuration for the Terraform backend. The backend is responsible for storing your Terraform state and can also be used to run operations in the cloud.
 
-Main/pipelines/azure-devops-pipeline.yaml: This file likely contains the configuration for an Azure DevOps pipeline. This pipeline is probably used to test, build, and deploy your Terraform infrastructure.
+Main/pipelines/azure-devops-pipeline.yaml: This file  contains the configuration for an Azure DevOps pipeline. This pipeline is probably used to test, build, and deploy your Terraform infrastructure.
 
-Main/provider.tf: This file typically contains the configuration for the Terraform providers that are used in your project. Providers are responsible for understanding API interactions and exposing resources.
+Main/provider.tf: This file contains the configuration for the Terraform providers that are used in your project. Providers are responsible for understanding API interactions and exposing resources.
 
-Main/root/data.tf: This file likely contains data source definitions. Data sources allow data to be fetched or computed for use elsewhere in your Terraform configuration.
+Main/root/data.tf: This file contains data source definitions. Data sources allow data to be fetched or computed for use elsewhere in your Terraform configuration.
 
-Main/root/main.tf: This is the main entry point for your Terraform configuration. It likely contains the root module that calls other modules defined in your project.
+Main/root/main.tf: This is the main entry point for your Terraform configuration. It  contains the root module that calls other modules defined in your project.
 
 Main/root/modules: This directory contains the modules for your Terraform configuration. Modules are containers for multiple resources that are used together.
 
-Compute: This module likely manages compute resources like virtual machines or Kubernetes clusters. It has specific configurations for AWS and Azure.
-Network: This module likely manages network resources like virtual networks and subnets.
-Storage: This module likely manages storage resources like Azure Containers and AWS S3 buckets.
-Main/scripts/setup-azure-cli.sh: This script likely sets up the Azure CLI on the machine where the Terraform code is being run. This could be used by the Azure provider or to interact with Azure services directly.
+Compute: This module manages compute resources like virtual machines or Kubernetes clusters. It has specific configurations for AWS and Azure.
+Network: This module manages network resources like virtual networks and subnets.
+Storage: This module manages storage resources like Azure Containers and AWS S3 buckets.
+Main/scripts/setup-azure-cli.sh: This script  sets up the Azure CLI on the machine where the Terraform code is being run. This could be used by the Azure provider or to interact with Azure services directly.
 
-Main/terraform.tf: This file likely contains additional Terraform configuration. The exact purpose would depend on the contents of the file.
+Main/terraform.tf: This file  contains additional Terraform configuration. The exact purpose would depend on the contents of the file.
 
-root/modules/Storage/Azure Containers/Blobs: This module likely manages Azure Blob Storage resources.
-root/modules/Storage/Azure Containers/Tables: This module likely manages Azure Table Storage resources.
-root/modules/Storage/Azure Containers/Queues: This module likely manages Azure Queue Storage resources.
-root/modules/Storage/Azure Containers/Files: This module likely manages Azure File Storage resources.
-root/modules/Storage/S3: This module likely manages AWS S3 bucket resources.
-root/modules/Storage/data.tf: This file likely contains data source definitions for storage resources.
-root/modules/Storage/main.tf: This file likely contains the main configuration for storage resources.
-root/modules/Storage/outputs.tf: This file likely contains output definitions for storage resources.
-root/modules/Storage/variables.tf: This file likely contains variable definitions for storage resources.
-root/modules/Network/data.tf: This file likely contains data source definitions for network resources.
-root/modules/Network/outputs.tf: This file likely contains output definitions for network resources.
-root/modules/Network/variables.tf: This file likely contains variable definitions for network resources.
-root/modules/Network/main.tf: This file likely contains the main configuration for network resources.
+root/modules/Storage/Azure Containers/Blobs: This module manages Azure Blob Storage resources.
+root/modules/Storage/Azure Containers/Tables: This module manages Azure Table Storage resources.
+root/modules/Storage/Azure Containers/Queues: This module manages Azure Queue Storage resources.
+root/modules/Storage/Azure Containers/Files: This module manages Azure File Storage resources.
+root/modules/Storage/S3: This module manages AWS S3 bucket resources.
+root/modules/Storage/data.tf: This file contains data source definitions for storage resources.
+root/modules/Storage/main.tf: This file contains the main configuration for storage resources.
+root/modules/Storage/outputs.tf: This file contains output definitions for storage resources.
+root/modules/Storage/variables.tf: This file contains variable definitions for storage resources.
+root/modules/Network/data.tf: This file contains data source definitions for network resources.
+root/modules/Network/outputs.tf: This file contains output definitions for network resources.
+root/modules/Network/variables.tf: This file contains variable definitions for network resources.
+root/modules/Network/main.tf: This file contains the main configuration for network resources.
 
 ### Folder Structure
 

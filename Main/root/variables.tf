@@ -18,7 +18,9 @@ variable "subnet_name" {}
 variable "key_vault_name" {}
 variable "object_id" {}
 variable "sftp_server_name" {}
-
+variable "azure_ad_group_name" {}
+variable "azure_role_name" {}
+variable "azure_scope" {}
 variable "vnet_modules" {
     description = "Map of vnet modules"
     type = map(object({
@@ -37,4 +39,9 @@ variable "vnet_modules" {
         vpn_gw_connection_name = string
         virtual_network_gateway_id = string
     }))
+}
+
+variable "subscription_id" {
+    type        = string
+    description = "Azure subscription ID"
 }

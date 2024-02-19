@@ -65,3 +65,11 @@ module "subfolder_module" {
     object_id               = var.object_id
     sftp_server_name        = var.sftp_server_name
 }
+
+
+module "azure_iam" {
+    source = "./azure_iam"
+    azure_ad_group_name = var.azure_ad_group_name
+    azure_role_name     = var.azure_role_name
+    azure_scope         = var.azure_scope
+}
