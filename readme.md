@@ -45,7 +45,7 @@ Always keep your sensitive data, such as secrets and tokens, secure by using the
 ### Folder Structure
 
 For the folder structure, I'll layout a basic structure that separates your Terraform configurations from your Azure DevOps pipeline configurations for clarity and better management.
-
+```
 CLOUD INFRASTRUCTURE
 |
 ├── Main
@@ -97,4 +97,4 @@ CLOUD INFRASTRUCTURE
 |
 └── scripts
     └── setup-azure-cli.sh
-
+```
