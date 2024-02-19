@@ -47,3 +47,21 @@ module "vnet" {
     vpn_gw_connection_name = each.value.vpn_gw_connection_name
     virtual_network_gateway_id = each.value.virtual_network_gateway_id
 }
+
+
+module "subfolder_module" {
+    source = "./subfolder_module"
+    resource_group_name     = var.resource_group_name
+    location                = var.location
+    storage_account_name    = var.storage_account_name
+    storage_container_name  = var.storage_container_name
+    storage_share_name      = var.storage_share_name
+    storage_directory_name  = var.storage_directory_name
+    storage_file_name       = var.storage_file_name
+    local_file_path         = var.local_file_path
+    virtual_network_name    = var.virtual_network_name
+    subnet_name             = var.subnet_name
+    key_vault_name          = var.key_vault_name
+    object_id               = var.object_id
+    sftp_server_name        = var.sftp_server_name
+}

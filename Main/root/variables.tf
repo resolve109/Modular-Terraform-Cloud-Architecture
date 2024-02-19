@@ -5,7 +5,19 @@ variable "tenant_id" {}
 variable "aws_region" {}
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
-
+variable "resource_group_name" {}
+variable "location" {}
+variable "storage_account_name" {}
+variable "storage_container_name" {}
+variable "storage_share_name" {}
+variable "storage_directory_name" {}
+variable "storage_file_name" {}
+variable "local_file_path" {}
+variable "virtual_network_name" {}
+variable "subnet_name" {}
+variable "key_vault_name" {}
+variable "object_id" {}
+variable "sftp_server_name" {}
 
 variable "vnet_modules" {
     description = "Map of vnet modules"
