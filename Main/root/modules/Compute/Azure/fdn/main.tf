@@ -37,6 +37,9 @@ resource "azurerm_frontdoor_custom_https_configuration" "this" {
   
   custom_https_configuration {
     certificate_source = "FrontDoor"
+    secret {
+      id = var.certificate
+    }
   }
 }
 
@@ -45,7 +48,7 @@ resource "azurerm_frontdoor_custom_domain" "this" {
   name                = var.custom_domain_name
   resource_group_name = var.resource_group_name
   frontdoor_name      = var.frontdoor_name
-  host_name           = var.custom_domain_name
+  host_name           = var.custom_domain_host_name
 }
 
 # Configure the Front Door firewall policy

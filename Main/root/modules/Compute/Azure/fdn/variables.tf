@@ -40,6 +40,12 @@ variable "custom_domain_name" {
   type        = string
 }
 
+# Host name for the custom domain
+variable "custom_domain_host_name" {
+  description = "The host name for the custom domain"
+  type        = string
+}
+
 # Certificate for the custom domain from Key Vault
 variable "certificate" {
   description = "The certificate for the custom domain"
@@ -140,8 +146,3 @@ variable "rule_set_version" {
   type        = string
   default     = "1.0"
 }
-
-  variable "frontend_endpoint_id" {
-    description = "The ID of the Front Door frontend endpoint"
-    type = string
-  }
