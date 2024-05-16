@@ -1,10 +1,15 @@
+#front door configuration module
+
+provider "azurerm" {
+  features {}
+}
+
 # Use the frontdoor_configuration module
 module "frontdoor_configuration" {
   source = "./modules/frontdoor_configuration"
 
-  # Specify the resource group details using data source
-  resource_group_name    = data.azurerm_resource_group.my_rg.name
-  resource_group_location = data.azurerm_resource_group.my_rg.location
+  # Specify the names and configurations
+  resource_group_name    = "my-resource-group"
   frontdoor_name         = "my-existing-frontdoor"
   routing_rule_name      = "my-routing-rule"
   frontend_endpoint_name = "my-frontend-endpoint"
